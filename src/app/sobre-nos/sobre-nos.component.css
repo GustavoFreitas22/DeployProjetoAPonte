@@ -1,0 +1,21 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+#img-bg{
+    background-image: url('https://i.imgur.com/d8F43Z3.jpg?1');
+    background-position: center;
+    min-height:100vh ;
+    min-width: 100vh;
+    background-repeat: no-repeat;
+    background-size:cover ;
+}
+.borda{
+    border: solid 2px #9475BF;
+    border-radius: 25px;
+}
+.borda:hover{
+    background-color: #99E9F2;
+}
+.list{
+    list-style: none;
+}

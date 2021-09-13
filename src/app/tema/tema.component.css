@@ -1,0 +1,11 @@
+.bg-azul{
+    background-color:  #99E9F2;
+    border-bottom: 2px solid #A0D9AE;
+}
+
+#img-bg{
+    background-image: url('https://i.imgur.com/OqtsBWE.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover ;
+}

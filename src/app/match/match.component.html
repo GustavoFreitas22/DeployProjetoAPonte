@@ -1,0 +1,64 @@
+<div class="container-fluid" id="img-bg">
+    <div class="row">
+        <a routerLink='/feed' class="text-dark text-left p-3">Inicio <img src="https://i.imgur.com/xZ7sgQh.png" alt=""
+            width="25px" height="25px">
+        </a>
+        <div class="col-md-12 text-center">
+            <h2 class="text-center text-dark mt-5 mb-5" >Matches em postagem</h2>
+            <h4 class="text-center text-dark mb-5">Com base nas suas ultimas postagens, achamos que isso poderia te interessar</h4>
+            <button (click)='getIdTemaByUserPostagem() ; matchPost()' class="btn btn-info"> Mostrar postagens </button>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="matchesPostagem" role="tabpanel"
+                    aria-labelledby="matchesPostagem">
+                    <div class="card mb-3 mt-3 ml-3 mr-3 borda-feed">
+                        <div class="card-body" *ngFor='let post of listaPostagensIguais'>
+                            <h5 class="card-title">{{post.titulo}}</h5>
+                            <p class="card-text">{{post.texto}}
+                            </p>
+                            <p class="card-text"><small class="text-muted">Tema: {{post.tema.descricao}}</small></p>
+                            <p class="card-text"><small class="text-muted" >{{post.data| date: 'dd/MM/yyyy'}} ás {{post.data|date: 'HH:mm'}}</small></p>
+                            <p class="card-text"><small class="text-muted">by: {{post.usuario.nome}}</small></p>
+                            <button class="btn btn-info" data-toggle="modal"
+                            data-target="#contato">Entre em contato</button>
+
+                            <!-- Modal de contato-->
+                                <div  class="modal fade" id="contato" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="TituloModalCentralizado">Contato</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <img src="{{post.usuario.foto}}" alt="foto de quem postou" width="150px" height="150px"
+                        class="img-fluid rounded-circle shadow-lg p-1 mt-3">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="titulo">Nome do user</label>
+                                                <p>{{post.usuario.nome}}</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="titulo">Email do usuário</label>
+                                                <p>{{post.usuario.email}}</p>
+                                            </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="minhasPostagens-tab" >
+            </div>
+        </div>
+    </div>
+</div>
+

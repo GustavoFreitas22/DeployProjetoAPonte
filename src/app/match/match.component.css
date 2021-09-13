@@ -1,0 +1,11 @@
+#img-bg{
+    background-image: url('https://i.imgur.com/OqtsBWE.jpg%27');
+    background-position: center;
+    background-size:cover ;
+    min-width: 100vh;
+    min-height:100vh ;
+
+}
+.borda-feed{
+    border: 2px solid #A0D9AE ;
+}

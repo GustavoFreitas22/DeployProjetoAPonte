@@ -1,0 +1,44 @@
+#img-bg{
+    background-image: url('https://imgur.com/Mz4FtXJ.jpg');
+
+    min-height: 100vh; 
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img-logo{
+    background-image: url('https://imgur.com/5jKJjJD.jpg');
+
+    min-height: 650px; 
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+#bg-color{
+    background-color: white;
+    border-style: groove;
+    border: 2px solid #9475BF;
+    border-radius: 12px;
+    color: #9475BF;
+    font-weight: bold;
+    
+}
+
+#borda{
+    border: 2px solid rgb(172, 99, 202);
+    border-radius: 12px;
+    color: rgb(176, 77, 201);
+    margin: 30px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+}
+
+.form-control{
+    border: 2px solid #dbb5ce;
+    
+}
