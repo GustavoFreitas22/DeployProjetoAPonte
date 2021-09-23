@@ -38,21 +38,25 @@ export class MatchComponent implements OnInit {
       this.listaPostagens = resp
     })
   }
+
   getUserById(){
     this.auth.getByIdUser(this.UserId).subscribe((resp: Usuario)=>{
       this.user = resp
       
     })
   }
+
   getIdTemaByUserPostagem(){
     this.temaId = this.user.postagem.map((post: Postagem)=>{
       return post.tema.id
     })
   }
+
   matchPost(){
     this.listaPostagensIguais = this.listaPostagens.filter((post: Postagem)=>{
       return this.temaId.includes(post.tema.id) && post.usuario.id != this.UserId      
     })
     console.log(this.listaPostagensIguais)
   }
+
 }

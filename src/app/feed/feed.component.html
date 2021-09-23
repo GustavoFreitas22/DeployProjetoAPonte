@@ -4,7 +4,7 @@
             <ul class="nav flex-column text-center">
                 <li>
                     <img src="{{foto}}" alt="" width="150px" height="150px"
-                        class="img-fluid rounded-circle shadow-lg p-1 mt-3">
+                        class="img rounded-circle shadow-lg p-1 mt-3">
                 </li>
                 <li>
                     <h4 class="font-weigth-bold mt-5">{{nome}}</h4>
@@ -46,7 +46,7 @@
                     <div class="card mb-3 mt-3 borda-feed" *ngFor='let item of listaPostagem'>
                         <div class="card-body">
                             <img src="{{item.usuario.foto}}" alt="foto user"  width="100px" height="100px"
-                            class="img-fluid rounded-circle shadow-lg p-2 mb-3">
+                            class="img rounded-circle shadow-lg p-2 mb-3">
                             <h5 class="card-title">{{item.titulo}}</h5>
                             <p class="card-text"> {{item.texto}}
                             </p>
@@ -61,7 +61,7 @@
                     <div class="card mb-3 mt-3 borda-feed" *ngFor='let post of user.postagem'>
                         <div class="card-body">
                             <img src="{{post.usuario.foto}}" alt="foto user"  width="100px" height="100px"
-                            class="img-fluid rounded-circle shadow-lg p-2 mb-3">
+                            class="img rounded-circle shadow-lg p-2 mb-3">
                             <h5 class="card-title">{{post.titulo}}</h5>
                             <p class="card-text"> {{post.texto}}
                             </p>

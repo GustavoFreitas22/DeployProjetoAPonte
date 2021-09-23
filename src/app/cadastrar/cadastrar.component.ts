@@ -26,6 +26,9 @@ export class CadastrarComponent implements OnInit {
 
   cadastrar(){
     this.user.tipo = this.tipoUser
+    if(this.user.foto == ''){
+      this.user.foto = 'https://i.imgur.com/sY3ZrJA.gif'
+    }
 
     if(this.user.senha != this.confirmSenha){
       this.alertas.showAlertDanger('Senhas incorretas')
